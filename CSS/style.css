@@ -1,4 +1,5 @@
 @import url(sanitize.css);
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 body {
     background-color: #f0f0f0;
@@ -8,7 +9,7 @@ body {
 }
 
 .container {
-    width: 800px;
+    max-width: 800px;
     box-shadow: 0 0 10px rgba(0,0, 0, .3);
     margin: 0 auto;
 }
@@ -24,6 +25,7 @@ header h1 {
     font-size: 24px;
     font-weight: normal;
     text-align: center;
+    font-family: 'Libre Baskerville', serif;
 }
 
 .description {
@@ -32,7 +34,14 @@ header h1 {
 .description img {
     float: left;
     margin: 0 10px 10px 0;
+    transition-property: opacity;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
 
+.description img:hover {
+    opacity: .5;
 }
 
 .information h1 {
@@ -84,4 +93,39 @@ header h1 {
     content: " ";
     display: table;
     clear: both;
+}
+
+a {
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    font-size: 80%;
+}
+
+@media only screen and (max-width: 600px) {
+    .description img {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+
+    header {
+        padding: 5px;
+    }
+
+    header {
+        font-size: 12px;
+    }
+
+    .information h1 {
+        font-size: 14px;
+    }
+
+    .songs li {
+        float: none;
+        width: inherit;
+    }
+
 }
